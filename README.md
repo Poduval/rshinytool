@@ -7,6 +7,5 @@ This is package to demonstrate how a shiny application can be integrated in a R 
 
 ## Application list 
 
-  - helloWorld(): Simple tool taken from R shiny gallery 
-  - kmeansClustering(): https://shiny.rstudio.com/gallery/kmeans-example.html
-  
+ - `rshinytool:::helloWorld()`
+ - `rshinytool:::kmeansClustering()`: https://shiny.rstudio.com/gallery/kmeans-example.html
