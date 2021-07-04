@@ -1,18 +1,18 @@
-#' @title Hello world application
+#' @title Iris k-means clustering
 #' @description Simplest shiny application available in shiny galary
 #' @details Used for demo R package with shiny tools
-#' @usage helloWorld()
+#' @usage kmeansClustering()
 #' @return Nothing
 #' @import shiny 
 #' @export
 #' @examples
 #' if (interactive()) {
-#'   helloWorld()
+#'   kmeansClustering()
 #' }
 #' 
-helloWorld <- function() {
+kmeansClustering <- function() {
   
-  app_dir = system.file("hello-world", package = "rshinytool")
+  app_dir = system.file("k-means-clustering", package = "rshinytool")
   if (app_dir == "") stop("ERROR, try re-installing `rshinytool`.", call. = FALSE)
   runApp(app_dir, display.mode = "normal")
   

@@ -1,2 +1,3 @@
 name	user	system	elapsed
-helloWorld	0.000	0.000	0.001	
+helloWorld	0.000	0.001	0.001	
+kmeansClustering	0	0	0	

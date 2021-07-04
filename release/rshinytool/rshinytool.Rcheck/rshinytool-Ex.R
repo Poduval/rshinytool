@@ -27,7 +27,6 @@ base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: helloWorld
 ### Title: Hello world application
 ### Aliases: helloWorld
-### Keywords: Hello app world
 
 ### ** Examples
 
@@ -40,6 +39,28 @@ if (interactive()) {
 
 base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
 base::cat("helloWorld", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+cleanEx()
+nameEx("kmeansClustering")
+### * kmeansClustering
+
+flush(stderr()); flush(stdout())
+
+base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+### Name: kmeansClustering
+### Title: Iris k-means clustering
+### Aliases: kmeansClustering
+
+### ** Examples
+
+if (interactive()) {
+  kmeansClustering()
+}
+
+
+
+
+base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+base::cat("kmeansClustering", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 ### * <FOOTER>
 ###
 cleanEx()

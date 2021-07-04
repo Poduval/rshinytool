@@ -1,7 +1,6 @@
 #' @title Hello world application
 #' @description Simplest shiny application available in shiny galary
 #' @details Used for demo R package with shiny tools
-#' @keywords Hello world app
 #' @usage helloWorld()
 #' @return Nothing
 #' @import shiny 

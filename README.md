@@ -1,8 +1,12 @@
 # rshinytool
-A R-shiny tool for performing basic statistical operations.
+
+A R package with some shiny applications integrated.
 
 ## About
+This is package to demonstrate how a shiny application can be integrated in a R package.
 
-## tools 
+## Application list 
 
-  - helloWorld() 
+  - helloWorld(): Simple tool taken from R shiny gallery 
+  - kmeansClustering(): https://shiny.rstudio.com/gallery/kmeans-example.html
+  

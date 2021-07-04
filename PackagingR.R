@@ -9,9 +9,9 @@ pkg_author <- person("Rakesh", "Poduval",
                      email = "poduval.rakesh@icloud.com",
                      role = c("aut", "cre"))
 
-RScripts <- c("hello-world.R")
+RScripts <- c("hello-world.R", "k-means-clustering.R")
 RFiles <- file.path("R", RScripts)
-RshinyApps <- c("hello-world")
+RshinyApps <- c("hello-world", "k-means-clustering")
 RshinyFolders <- file.path("tools", RshinyApps)
 RData <- "data"
 
@@ -45,9 +45,12 @@ file.copy(RFiles, file.path(pkg_path, "R"))
 destdir <- file.path(pkg_path, "inst")
 shinydir <- file.path(destdir, basename(RshinyFolders))
 
-if(!dir.exists(shinydir)) dir.create(file.path(shinydir), recursive = T)
-file.copy(file.path(RshinyFolders, list.files(RshinyFolders)), 
-          shinydir)
+for(i in 1:length(shinydir)) {
+  if(!dir.exists(shinydir[i]))
+    dir.create(file.path(destdir, basename(shinydir[i])), recursive = T)
+  file.copy(file.path(RshinyFolders[i], list.files(RshinyFolders[i])), 
+            shinydir[i])
+}
 
 # Create Rd files (help files) from roxygen comments ====
 document(pkg_path)
@@ -66,3 +69,4 @@ install(pkg_path)
 
 # ==== test ====
 rshinytool:::helloWorld()
+rshinytool:::kmeansClustering()

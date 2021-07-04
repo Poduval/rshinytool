@@ -46,7 +46,6 @@ Type 'q()' to quit R.
 > ### Name: helloWorld
 > ### Title: Hello world application
 > ### Aliases: helloWorld
-> ### Keywords: Hello app world
 > 
 > ### ** Examples
 > 
@@ -59,12 +58,34 @@ Type 'q()' to quit R.
 > 
 > base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
 > base::cat("helloWorld", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("kmeansClustering")
+> ### * kmeansClustering
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: kmeansClustering
+> ### Title: Iris k-means clustering
+> ### Aliases: kmeansClustering
+> 
+> ### ** Examples
+> 
+> if (interactive()) {
++   kmeansClustering()
++ }
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("kmeansClustering", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 > ### * <FOOTER>
 > ###
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.296 0.022 0.323 0 0 
+Time elapsed:  0.322 0.023 0.351 0 0 
 > grDevices::dev.off()
 null device 
           1 

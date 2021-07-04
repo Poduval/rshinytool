@@ -21,6 +21,3 @@ if (interactive()) {
 }
 
 }
-\keyword{Hello}
-\keyword{app}
-\keyword{world}
