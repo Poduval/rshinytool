@@ -52,6 +52,12 @@ for(i in 1:length(shinydir)) {
             shinydir[i])
 }
 
+# Add release notes
+if (!dir.exists(file.path(pkg_path, "inst")))
+  dir.create(file.path(pkg_path, "inst"), recursive = T)
+
+file.copy("NEWS.md", file.path(pkg_path, "inst/NEWS"), overwrite = T)
+
 # Create Rd files (help files) from roxygen comments ====
 document(pkg_path)
 
@@ -68,5 +74,6 @@ install(pkg_path)
 # build(pkg_path, binary = TRUE)
 
 # ==== test ====
+news(package = "rshinytool")
 rshinytool:::helloWorld()
 rshinytool:::kmeansClustering()
