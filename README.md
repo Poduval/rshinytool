@@ -5,6 +5,10 @@ A R package with some shiny applications integrated.
 ## About
 This is package to demonstrate how a shiny application can be integrated in a R package.
 
+## Installation
+
+`install_github("Poduval/rshinytool/release/rshinytool")`
+
 ## Application list 
 
  - `rshinytool:::helloWorld()`

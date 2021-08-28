@@ -53,11 +53,6 @@ for(i in 1:length(shinydir)) {
 }
 
 # Add release notes
-if (FALSE) {
-  if (!dir.exists(file.path(pkg_path, "inst")))
-    dir.create(file.path(pkg_path, "inst"), recursive = T)
-}
-
 file.copy("NEWS.md", pkg_path, overwrite = T)
 
 # Create Rd files (help files) from roxygen comments ====
